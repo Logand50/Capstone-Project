@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Study Guide</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default container">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand">StudyHub</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="hardware.html">Hardware</a></li>
+                <li><a href="software.html">Software</a></li>
+                <li><a href="networking.html">Networking</a></li>
+                <li><a href="electrical.html">Electrical</a></li>
+                <li><a href="math.html">Math</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Hardware</h2>
+                </div>
+                <div class="panel-body">
+                    <p>This section provides a structured breakdown of the major hardware subsystems that form a modern computer and explains
+                    the attributes that determine how each part performs, interacts with other components, and influences overall system
+                    behavior. It covers the CPU as the execution core responsible for instruction handling and coordination, highlighting
+                    factors such as clock speed, core count, IPC, cache hierarchy, and power limits. It explains how system memory acts as
+                    the working area for active processes, where capacity, speed, latency, and channel configuration shape responsiveness
+                    and workload scaling.<br><br>
+                    
+                    Storage technologies are separated by interface, form factor, and performance characteristics, showing how NVMe, SATA
+                    SSDs, and HDDs differ in throughput, latency, endurance, and use cases. Motherboards and chipsets are positioned as the
+                    foundation that defines compatibility, expansion, and power delivery quality, while the PSU section details electrical
+                    stability, efficiency, and connector requirements.<br><br>
+                    
+                    Graphics processors are outlined in terms of parallel compute capability, VRAM capacity, bandwidth, and driver/API
+                    factors that influence both rendering and general-purpose workloads. Cooling coverage explains thermal transfer,
+                    airflow, liquid cooling considerations, and how thermal limits constrain sustained performance.<br><br>
+                    
+                    The section also describes I/O buses such as PCIe, SATA, USB, and Thunderbolt, showing how bandwidth and protocol design
+                    affect device communication. Networking fundamentals are included to differentiate wired and wireless standards, latency
+                    behavior, and security features. Finally, system architecture concepts connect everything together by explaining
+                    bottlenecks, memory hierarchy, NUMA effects, and how power and thermals cap real-world performance.</p>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Resources</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <l1 class="list-group-item"><a
+                                href="https://www.geeksforgeeks.org/computer-science-fundamentals/computer-fundamentals-tutorial//">“Computer Fundamentals Tutorial” - GeeksforGeeks.</a>
+                            <p>Explains hardware concepts with precise definitions and short technical breakdowns. Covers CPUs, memory, buses, storage,
+                            and architecture with direct terminology.</p>
+                        </l1>
+                        <l1 class="list-group-item"><a href="https://www.tutorialspoint.com/computer_fundamentals/computer_hardware.htm">“Computer - Hardware” - Tutorialspoint.</a>
+                            <p>Provides linear, beginner-level explanations of core components. Focuses on function, structure, and terminology without
+                            depth or opinion.</p>
+                        </l1>
+                        <l1 class="list-group-item"><a
+                                href="https://www.netacad.com/courses/computer-hardware-basics?courseLang=en-US">“Computer Hardware Basics | Free Course on Components” - Cisco NetAcad.</a>
+                            <p>Structured training format built around practical identification of components. Prioritizes real hardware behavior,
+                            troubleshooting logic, and configuration awareness.</p>
+                        </l1>
+                        <l1 class="list-group-item"><a
+                                href="https://www.khanacademy.org/computing/code-org/computers-and-the-internet/how-computers-work/v/khan-academy-and-codeorg-introducing-how-computers-work">“CPU, memory, input & output (video)” - Khan Academy / Code.org.</a>
+                            <p>Visual walkthrough of how core subsystems communicate. Strips the system to essentials: execution, storage, and data
+                            flow.</p>
+                        </l1>
+                        <l1 class="list-group-item"><a href="https://openlab.citytech.cuny.edu/com-basics/">“Hardware Guide | Computer Hardware Basics” - City Tech OpenLab.</a>
+                            <p>Straightforward reference for foundational PC components. Describes purpose, physical layout, and interconnections in
+                            plain operational terms.</p>
+                        </l1>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Notes</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>CPU
+                            <ul>
+                                <li>Executes instructions and manages system control flow.</li>
+                                <li>Clock speed influences single-thread responsiveness; boost clocks are thermally limited.</li>
+                                <li>Core and thread count determine parallel throughput; SMT adds logical threads.</li>
+                                <li>IPC (instructions per cycle) depends on architecture; often outweighs raw GHz.</li>
+                                <li>Cache hierarchy (L1/L2/L3) reduces memory latency; size and speed shape workload performance.</li>
+                                <li>Instruction sets (x86-64, ARM64) and vector extensions (AVX, SSE, NEON) affect compute types.</li>
+                                <li>Socket and chipset define compatibility; BIOS/UEFI firmware must support the CPU.</li>
+                                <li>TDP and sustained power limits governed by cooling and VRMs.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Memory (RAM)
+                            <ul>
+                                <li>Volatile working space for active processes.</li>
+                                <li>Capacity limits concurrency and dataset size; swapping devastates performance.</li>
+                                <li>Frequency and timings shape bandwidth and latency.</li>
+                                <li>Single/Dual/Quad channel affects effective throughput.</li>
+                                <li>ECC corrects bit errors; required for many server platforms.</li>
+                                <li>Memory hierarchy: caches → RAM → storage; avoid overflowing into slower tiers.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Storage
+                            <ul>
+                                <li>NVMe SSDs use PCIe for high bandwidth and low latency.</li>
+                                <li>SATA SSDs limited by interface speed but strong for random I/O.</li>
+                                <li>HDDs offer low cost per GB but high latency and low IOPS.</li>
+                                <li>Form factors: M.2, U.2, 2.5", 3.5".</li>
+                                <li>SSD endurance measured via TBW and P/E cycles.</li>
+                                <li>RAID: performance, redundancy, or both (RAID0/1/5/6/10).</li>
+                                <li>Controller caching (SLC/DRAM) affects sustained write behavior.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Motherboard & Chipset
+                            <ul>
+                                <li>Platform connecting CPU, memory, storage, and peripherals.</li>
+                                <li>Chipset dictates PCIe lane distribution, USB/SATA counts, and features.</li>
+                                <li>VRM quality influences CPU stability and boost performance.</li>
+                                <li>Form factors (ATX, mATX, ITX) define expansion capacity.</li>
+                                <li>BIOS/UEFI initializes hardware and controls memory profiles and security settings.</li>
+                                <li>Headers and slots determine expandability (M.2, PCIe, fan headers).</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Power Supply (PSU)
+                            <ul>
+                                <li>Converts AC to regulated DC power for components.</li>
+                                <li>Wattage must exceed peak system load with margin.</li>
+                                <li>Efficiency ratings (Bronze → Titanium) reduce waste heat.</li>
+                                <li>Single vs multi-rail changes current distribution behavior.</li>
+                                <li>Connectors: ATX, EPS, PCIe, SATA must match hardware.</li>
+                                <li>Protections: OCP, OVP, SCP, OPP reduce hardware failure risk.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>GPU
+                            <ul>
+                                <li>Parallel processor optimized for graphics and compute workloads.</li>
+                                <li>Shader/compute unit count drives throughput.</li>
+                                <li>VRAM capacity limits resolution, texture size, and ML model size.</li>
+                                <li>Memory bandwidth shaped by bus width and memory type (GDDR, HBM).</li>
+                                <li>Driver quality and APIs (DirectX, Vulkan, CUDA) determine real-world behavior.</li>
+                                <li>Cooling and power demands are high for modern high-end GPUs.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Cooling
+                            <ul>
+                                <li>Air and liquid systems remove heat from CPU/GPU/VRMs.</li>
+                                <li>Air coolers rely on heatpipes; inexpensive with fewer failure modes.</li>
+                                <li>Liquid cooling offers high headroom but adds maintenance risk.</li>
+                                <li>Thermal interface quality affects heat transfer.</li>
+                                <li>Fan curves and airflow tuning prevent throttling.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>I/O & Buses
+                            <ul>
+                                <li>PCIe provides high-speed expansion; lane count and generation affect bandwidth.</li>
+                                <li>SATA persists for HDDs and older SSDs.</li>
+                                <li>USB versions vary in speed and features; USB-C supports alternate modes and high power.</li>
+                                <li>Thunderbolt offers PCIe tunneling and daisy-chaining.</li>
+                                <li>M.2 connects NVMe drives directly to PCIe lanes.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Networking
+                            <ul>
+                                <li>Ethernet: stable low-latency wired communication with speeds up to 100GbE+.</li>
+                                <li>Wi-Fi standards (5/6/6E/7) vary by frequency, channel width, and modulation.</li>
+                                <li>Latency and jitter critical for real-time tasks.</li>
+                                <li>Security: WPA3, VLANs, QoS, NIC offload features.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>System Architecture
+                            <ul>
+                                <li>Bottlenecks appear where subsystems are mismatched in performance.</li>
+                                <li>Balance CPU, GPU, RAM bandwidth, and storage latency.</li>
+                                <li>NUMA affects memory placement on multi-socket systems.</li>
+                                <li>Thermal and power ceilings often limit sustained performance.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>&copy; 2024-2025 Logan Dye. All rights reserved.</p>
+                </div>
+                <div class="panel-footer">
+                    <a href="https://logandye.com/">https://www.logandye.com/</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
