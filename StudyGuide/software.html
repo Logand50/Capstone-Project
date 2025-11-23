@@ -30,12 +30,36 @@
         <div class="panel-group">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h2>Hardware</h2>
+                    <h2>Software</h2>
                 </div>
                 <div class="panel-body">
-                    <p>Delve into the intricate world of computer hardware, where you’ll learn about the components that power modern computing
-                    devices. From the basics of microprocessors and memory modules to advanced topics in hardware design and optimization,
-                    our resources will guide you through the foundational and cutting-edge aspects of computer hardware.</p>
+                    <p>Software splits into functional strata that determine how a system behaves from the lowest execution layer to the
+                    highest user-facing logic. The foundation is the operating system, which allocates hardware resources, enforces
+                    isolation, schedules processes, manages memory, and provides the system-level interfaces that all higher layers use.
+                    System utilities extend the OS with targeted functions such as diagnostics, configuration, service management, and file
+                    operations, forming the operational toolkit that keeps the environment coherent.<br><br>
+                    
+                    Drivers operate as translation layers between hardware and the OS kernel. They expose device capabilities, define
+                    communication protocols, and determine stability and performance for every component attached to the machine.
+                    Application software sits above these layers, executing domain-specific logic for productivity, communication,
+                    computation, or media. Their performance, security, and reliability are direct products of the underlying OS and driver
+                    stack.<br><br>
+                    
+                    Middleware forms the connective tissue for distributed and modular systems. It standardizes communication, abstracts
+                    heterogeneity, manages transactions, and shapes throughput characteristics in multi-component architectures. Programming
+                    languages define the abstraction level and execution model used to create software, while compilers and interpreters
+                    convert human-readable logic into machine-executable instructions. Development tools govern the workflow: version
+                    control, build systems, dependency managers, debuggers, and testing frameworks dictate code quality, reproducibility,
+                    and maintainability.<br><br>
+                    
+                    Security software enforces integrity, confidentiality, and execution hygiene. It intercepts malicious behavior, controls
+                    access, analyzes traffic, and responds to anomalies. Virtualization and containerization introduce isolation boundaries
+                    that run multiple systems or applications on the same hardware with controlled resource sharing, enabling
+                    reproducibility, scalability, and deployment uniformity.<br><br>
+                    
+                    The entire stack functions as a layered mechanism where each tier sets constraints on those above it. Performance,
+                    stability, security, and scalability emerge from interactions across these layers rather than from any component in
+                    isolation.</p>
                 </div>
             </div>
             <div class="panel panel-default">
@@ -45,31 +69,23 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <l1 class="list-group-item"><a
-                                href="https://www.lifewire.com/computer-hardware-2625895">Resource Link 1</a>
-                            <p>Resource link description...</p>
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN Web Docs (Web platform and JavaScript guides)</a>
+                            <p>Authoritative, example-driven reference and tutorials for web platform technologies (HTML, CSS, JavaScript) and best
+                            practices for building and debugging web applications.</p>
                         </l1>
-                        <l1 class="list-group-item"><a href="https://en.wikipedia.org/wiki/Computer_hardware">Resource
-                                Link 2</a>
-                            <p>Resource link description...</p>
-                        </l1>
-                        <l1 class="list-group-item"><a
-                                href="https://www.crucial.com/articles/pc-builders/what-is-computer-hardware">Resource
-                                Link 3</a>
-                            <p>Resource link description...</p>
+                        <l1 class="list-group-item"><a href="https://www.freecodecamp.org/">freeCodeCamp</a>
+                            <p>Free, hands-on curriculum covering front-end and back-end development, algorithms, data structures, and practical
+                            projects; strong for self-paced learners and portfolio work.</p>
                         </l1>
                         <l1 class="list-group-item"><a
-                                href="https://www.techtarget.com/searchnetworking/definition/hardware">Resource Link
-                                4</a>
-                            <p>Resource link description...</p>
-                        </l1>
-                        <l1 class="list-group-item"><a href="https://www.geeksforgeeks.org/computer-hardware/">Resource
-                                Link 5</a>
-                            <p>Resource link description...</p>
+                                href="https://www.coursera.org/browse/computer-science/software-development">Coursera (software engineering and programming courses)</a>
+                            <p>University-level courses and specializations covering fundamentals and applied topics; mix of video lectures, graded
+                            assignments, and capstone projects (audit/free options available).</p>
                         </l1>
                         <l1 class="list-group-item"><a
-                                href="https://medium.com/@s.atmaramani/100-computer-hardware-terms-9f66ffec202a">Resource
-                                Link 6</a>
-                            <p>Resource link description...</p>
+                                href="https://learn.github.com/">GitHub Learn / GitHub Skills / Learning Lab</a>
+                            <p>Interactive, repo-centric exercises for Git, GitHub workflows, collaboration, and common developer tooling; practical
+                            for mastering VCS and team workflows.</p>
                         </l1>
                     </ul>
                 </div>
@@ -77,6 +93,87 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>Notes</h3>
+                    <ul>
+                        <li>Software Overview
+                            <ul>
+                                <li>Definition: instructions and data that run on hardware to perform tasks.</li>
+                                <li>Categories: system software (OS, drivers), application software, middleware, firmware.</li>
+                                <li>Key concerns: correctness, performance, security, portability, maintainability.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Operating Systems (OS)
+                            <ul>
+                                <li>Role: resource manager—schedules CPU, manages memory, abstracts I/O and filesystems.</li>
+                                <li>Types: monolithic kernels, microkernels, hybrid, real-time OS (RTOS), mobile OS.</li>
+                                <li>Components: kernel, device drivers, userland utilities, system libraries.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Programming Languages & Runtimes
+                            <ul>
+                                <li>Compiled vs interpreted vs JIT-compiled languages.</li>
+                                <li>Runtime services: garbage collection, memory management, JIT, sandboxing.</li>
+                                <li>Language ecosystems: standard libraries, package managers, tooling (build, testing).</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Software Architecture & Design
+                            <ul>
+                                <li>Patterns: layered, microservices, event-driven, client-server, MVC.</li>
+                                <li>Quality attributes: scalability, reliability, maintainability, observability.</li>
+                                <li>Trade-offs: consistency vs availability, latency vs throughput, complexity vs flexibility.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Development Practices & Tooling
+                            <ul>
+                                <li>Version control, CI/CD pipelines, code review, automated testing, linters.</li>
+                                <li>Containers and virtualization for environment parity (Docker, VMs, orchestration).</li>
+                                <li>Dependency management and reproducible builds.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Data Storage & Databases
+                            <ul>
+                                <li>Relational (ACID) vs NoSQL (eventual consistency) models.</li>
+                                <li>Indexing, transactions, sharding, replication, backup strategies.</li>
+                                <li>Storage performance: latency, throughput, IOPS, caching layers.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Security
+                            <ul>
+                                <li>Authentication, authorization, encryption at rest/in transit, secure coding practices.</li>
+                                <li>Threat modeling, patch management, vulnerability scanning, secrets management.</li>
+                                <li>Runtime defenses: sandboxing, ASLR, DEP, code signing.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Testing & Quality Assurance
+                            <ul>
+                                <li>Unit, integration, system, regression, and acceptance tests.</li>
+                                <li>Test automation, mock/stub strategies, fuzzing, load and stress testing.</li>
+                                <li>Observability: logging, metrics, distributed tracing for diagnosing issues.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Performance & Optimization
+                            <ul>
+                                <li>Profiling hotspots, CPU vs I/O-bound analysis, algorithmic complexity.</li>
+                                <li>Caching strategies, concurrency models, backpressure and rate limiting.</li>
+                                <li>Resource limits and graceful degradation under load.</li>
+                            </ul>
+                        </li>
+                    
+                        <li>Maintenance & Lifecycle
+                            <ul>
+                                <li>Release strategies: semantic versioning, canary releases, blue/green deploys.</li>
+                                <li>Technical debt management, refactoring, deprecation policies.</li>
+                                <li>Documentation, onboarding, and knowledge transfer practices.</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="panel-body">
                     <p>This section will contain personal notes on topics.</p>
